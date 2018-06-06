@@ -7,9 +7,9 @@
  */
 
 $servername = "localhost";
-$username = "yourusername";
-$password = "yourpassword";
-$dbname = "yourdatabase";
+$username = "root";
+$password = "root";
+$dbname = "weproject";
 
 try {
         $conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);

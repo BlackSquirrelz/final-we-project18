@@ -166,3 +166,6 @@ body {
   margin-bottom:30px;
 }
 
+.btn:not(:disabled):not(.disabled) {
+}
+
