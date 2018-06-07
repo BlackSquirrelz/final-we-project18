@@ -1,25 +1,26 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Fabian
+ * user: Fabian
  * Date: 05.06.18
  * Time: 18:08
  */
 
 include 'landingheader.php';
+include 'logincontroller.php';
 
 ?>
 
 <div id="login-div">
-    <form method="post" id="login-form">
+    <form id="login-form" action="/final-we-project18/controller/logincontroller.php" method="post">
         <h1>log in</h1>
-        <input class="form-control" type="email" required="" placeholder="E-Mail">
-        <input class="form-control" type="password" required="" placeholder="Password">
+        <input class="form-control" name="email" type="text" required="" placeholder="E-Mail">
+        <input class="form-control" name="password" type="password" required="" placeholder="Password">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="formCheck-1">
             <label class="form-check-label" for="formCheck-1">Stay logged in</label>
         </div>
-        <p><a class="btn btn-primary" role="button">LOG IN</a></p>
+        <p><button class="btn btn-primary" type="submit">LOG IN</button></p>
         <a href="#">Forgot password?</a>
     </form>
 </div>

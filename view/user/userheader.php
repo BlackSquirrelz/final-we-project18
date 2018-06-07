@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Fabian
+ * user: Fabian
  * Date: 06.06.18
  * Time: 17:09
  */
@@ -34,7 +34,7 @@
             </ul>
             <form class="form-inline"><input class="form-control" type="search" placeholder="Search..."></form>
             <form class="form-inline ml-auto">
-                <p><a class="btn btn-primary" role="button" href="login.html">Log out</a></p>
+                <p><a class="btn btn-primary" role="button" href="../landing/login.php">Log out</a></p>
             </form>
         </div>
     </div>
