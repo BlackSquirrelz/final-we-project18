@@ -7,12 +7,12 @@
  */
 
 require_once ('../model/database/Database.php');
-require_once ('../model/Login.php');
+require_once ('../model/doa/UserDOA.php');
 
 use database\Database;
-use model\Login;
+use doa\UserDOA;
 
-if (Login::verifyUser($_POST['email'], $_POST['password'], Database::connect())) {
+if (UserDOA::verifyUser($_POST['email'], $_POST['password'], Database::connect())) {
     $extra = '/view/user/projectoverview.php';
     header("Location: http://localhost/final-we-project18/$extra");
 } else {

@@ -3,13 +3,26 @@
  * Created by PhpStorm.
  * User: Fabian
  * Date: 07.06.18
- * Time: 15:12
+ * Time: 16:53
  */
 
-namespace model;
+namespace doa;
 
-class SignUp
+class UserDOA
 {
+
+    public static function verifyUser($email, $password, $connection) {
+        $stmt = $connection->prepare("SELECT * FROM user WHERE EMAIL = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
+
+        if ($password == $user['PASSWORD'])
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public static function registerUser($firstname, $lastname, $email, $password, $connection)
     {

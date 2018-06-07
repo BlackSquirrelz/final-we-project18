@@ -7,13 +7,13 @@
  */
 
 require_once ('../model/database/Database.php');
-require_once ('../model/SignUp.php');
+require_once ('../model/doa/UserDOA.php');
 
 use database\Database;
-use model\SignUp;
+use doa\UserDOA;
 
 if ($_POST['password'] == $_POST['passwordRep']) {
-    SignUp::registerUser($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password'], Database::connect());
+    UserDOA::registerUser($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password'], Database::connect());
     $extra = '/view/user/projectoverview.php';
     header("Location: http://localhost/final-we-project18/$extra");
 } else {
