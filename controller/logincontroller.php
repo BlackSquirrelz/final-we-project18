@@ -13,7 +13,7 @@ use database\Database;
 use doa\UserDOA;
 
 if (UserDOA::verifyUser($_POST['email'], $_POST['password'], Database::connect())) {
-    $extra = '/view/user/projectoverview.php';
+    $extra = 'view/user/projectoverview.php';
     header("Location: http://localhost/final-we-project18/$extra");
 } else {
     echo "NOT A USER";

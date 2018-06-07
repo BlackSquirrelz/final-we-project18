@@ -7,7 +7,6 @@
  */
 
 include 'landingheader.php';
-include 'logincontroller.php';
 
 ?>
 

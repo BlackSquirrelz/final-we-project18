@@ -19,6 +19,16 @@ class Project
     private $project_owner;
     private $project_employees;
 
+    public function __construct($project_name, $project_description, $project_startdate, $project_duration, $project_owner, $project_employees)
+    {
+        $this->project_name = $project_name;
+        $this->project_description = $project_description;
+        $this->project_startdate = $project_startdate;
+        $this->project_duration = $project_duration;
+        $this->project_owner = $project_owner;
+        $this->project_employees = $project_employees;
+    }
+
     public function getId() {
         return $this->id;
     }
@@ -77,6 +87,10 @@ class Project
 
     public function addProjectEmployee($additional_name) {
         array_push($project_employee, "$additional_name");
+    }
+
+    public function getProject() {
+        return $this;
     }
 
 }

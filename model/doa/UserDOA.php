@@ -11,13 +11,13 @@ namespace doa;
 class UserDOA
 {
 
-    public static function verifyUser($email, $password, $connection) {
+    public static function verifyUser($email, $password, $connection)
+    {
         $stmt = $connection->prepare("SELECT * FROM user WHERE EMAIL = ?");
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if ($password == $user['PASSWORD'])
-        {
+        if ($password == $user['PASSWORD']) {
             return true;
         } else {
             return false;
@@ -32,6 +32,11 @@ class UserDOA
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
+    }
+
+    public static function deleteUser($userId)
+    {
+
     }
 
 }
