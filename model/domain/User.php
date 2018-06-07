@@ -26,59 +26,73 @@ class User
         $this->password = $password;
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function setId($id) {
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function getFirstName() {
+    public function getFirstName()
+    {
         return $this->first_name;
     }
 
-    public function setFirstName($first_name) {
+    public function setFirstName($first_name)
+    {
         $this->first_name = $first_name;
     }
 
-    public function getLastName() {
+    public function getLastName()
+    {
         return $this->last_name;
     }
 
-    public function setLastName($last_name) {
+    public function setLastName($last_name)
+    {
         $this->last_name = $last_name;
     }
 
-    public function getEmail() {
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function setEmail($email) {
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function getPassword() {
+    public function getPassword()
+    {
         return $this->password;
     }
 
-    public function setPassword($password) {
+    public function setPassword($password)
+    {
         $this->password = $password;
     }
 
-    public function getProjects() {
+    public function getProjects()
+    {
         return $this->projects;
     }
 
-    public function setProjectParticipation(array $projects) {
+    public function setProjectParticipation(array $projects)
+    {
         $this->projects = $projects;
     }
 
-    public function addProject($project_name) {
+    public function addProject($project_name)
+    {
         array_push($projects, "$project_name");
     }
 
-    public function getUser() {
+    public function getUser()
+    {
         return $this;
     }
 

@@ -34,6 +34,11 @@ class UserDOA
         $stmt->execute();
     }
 
+    public static function editUser()
+    {
+
+    }
+
     public static function deleteUser($userId)
     {
 

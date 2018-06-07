@@ -12,7 +12,8 @@ namespace doa;
 class ProjectDOA
 {
 
-    public static function addProject($project_name, $project_description, $project_start_date, $project_duration, $project_owner, $project_employees, $connection) {
+    public static function addProject($project_name, $project_description, $project_start_date, $project_duration, $project_owner, $project_employees, $connection)
+    {
         $stmt = $connection->prepare("INSERT INTO project (PROJECT_NAME, PROJECT_DESCRIPTION, P_STARTDATE, P_DURATION, P_OWNER, P_EMPLOYEES) VALUES (:project_name
                   , :project_description, :project_start_date, :project_duration, :project_owner, :project_employees)");
         $stmt->bindParam(':project_name', $project_name);
@@ -26,7 +27,13 @@ class ProjectDOA
         return true;
     }
 
-    public static function getProject($userId) {
+    public static function getProject($userId)
+    {
+
+    }
+
+    public static function deleteProject($projectId)
+    {
 
     }
 
